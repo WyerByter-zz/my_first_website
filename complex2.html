@@ -8,6 +8,26 @@
     </head>
     <body>
         <script type="text/javascript" src="./scripts/complex.js"></script>
+        <script type="text/javascript"> function complexmath() {
+            var z =  {};
+            var w =  {};
+            var v =  {};
+            
+            z.a = Number(document.getElementById("a1").value);
+            z.b = Number(document.getElementById("b1").value);
+            w.a = Number(document.getElementById("a2").value);
+            w.b = Number(document.getElementById("b2").value);
+            
+            v = addition(z,w);
+            document.getElementById("addition").innerHTML = "z+w="+ v.a + "+" + v.b + "<i>i</i>";
+            v = subtraction(z,w);
+            document.getElementById("subtraction").innerHTML = "z-w="+ v.a + "+" + v.b + "<i>i</i>";
+            v = multiplication(z,w);
+            document.getElementById("multiplication").innerHTML = "z*w="+ v.a + "+" + v.b + "<i>i</i>";
+            v = division(z,w);
+            document.getElementById("division").innerHTML = "z/w="+ v.a + "+" + v.b + "<i>i</i>";
+        } 
+        </script>
         <h1>Complex math in JavaScript</h1>
         <p>This is my first attempt at doing complex math in JavaScript</p>
         <p>Please enter two complex numbers in the boxes below.</p>
